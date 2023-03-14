@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic-tok</title>
+</head>
+<style>
+    .x {
+        height: 150px;
+        width: 150px;
+        text-align: center;
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <center>
+        <span id="winner"
+            style="font-size: 50px; color: rgb(255, 255, 255); background: #000; text-align: center;"></span> <br> <br>
+        <table border="1px" style="font-size: 22px;" class="tictac">
+            <tr>
+                <td id="har1" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har2" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har3" onclick="harshil(this); harshil27()" class="x"></td>
+            </tr>
+            <tr>
+                <td id="har4" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har5" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har6" onclick="harshil(this); harshil27()" class="x"></td>
+            </tr>
+            <tr>
+                <td id="har7" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har8" onclick="harshil(this); harshil27()" class="x"></td>
+                <td id="har9" onclick="harshil(this); harshil27()" class="x"></td>
+            </tr>
+        </table> <br>
+        <input type="reset" value="Reset" style="font-size: 30px;" onclick="harReset()">
+        <br> <br>
+        <h2>COUNT</h2>
+        <span>X won :</span> <span id="countX"></span> <br>
+        <span>O won:</span><span id="countO"></span>
+    </center>
+    <br> <br>
+    <!-- <span id="winner" style="font-size: 50px; color: rgb(255, 255, 255); background: #000; text-align: center;"></span> -->
+
+</body>
+
+<script>
+
+    let harFlag = 1;
+
+    function harshil(harshil7) {
+        if (harFlag == 1 && harshil7.innerHTML == '') {
+            harshil7.innerHTML = 'X';
+            harFlag = 0;
+        }
+        else if (harshil7.innerHTML == '') {
+            harshil7.innerHTML = 'O';
+            harFlag = 1;
+        }
+    }
+
+    // function harshil2() {
+    //     if (harFlag == 1 && har2.innerHTML == '') {
+    //         har2.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har2.innerHTML == '') {
+    //         har2.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    // function harshil3() {
+    //     if (harFlag == 1 && har3.innerHTML == '') {
+    //         har3.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har3.innerHTML == '') {
+    //         har3.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    // function harshil4() {
+    //     if (harFlag == 1 && har4.innerHTML == '') {
+    //         har4.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har4.innerHTML == '') {
+    //         har4.innerHTML = 'O';this
+
+
+    // function harshil5() {
+    //     if (harFlag == 1 && har5.innerHTML == '') {
+    //         har5.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har5.innerHTML == '') {
+    //         har5.innerHTML = 'O';
+    //         harFlag = 1;this
+
+    //     }
+    // }
+
+    // function harshil6() {
+    //     if (harFlag == 1 && har6.innerHTML == '') {
+    //         har6.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har6.innerHTML == '') {
+    //         har6.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    // function harshil7() {
+    //     if (harFlag == 1 && har7.innerHTML == '') {
+    //         har7.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har7.innerHTML == '') {
+    //         har7.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    // function harshil8() {
+    //     if (harFlag == 1 && har8.innerHTML == '') {
+    //         har8.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har8.innerHTML == '') {
+    //         har8.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    // function harshil9() {
+    //     if (harFlag == 1 && har9.innerHTML == '') {
+    //         har9.innerHTML = 'X';
+    //         harFlag = 0;
+    //     }
+    //     else if (har9.innerHTML == '') {
+    //         har9.innerHTML = 'O';
+    //         harFlag = 1;
+    //     }
+    // }
+
+    let harCountX = 0;
+    let harCountO = 0;
+
+    function harshil27() {
+        let h1 = har1.innerText;
+        let h2 = har2.innerText;
+        let h3 = har3.innerText;
+        let h4 = har4.innerText;
+        let h5 = har5.innerText;
+        let h6 = har6.innerText;
+        let h7 = har7.innerText;
+        let h8 = har8.innerText;
+        let h9 = har9.innerText;
+
+
+        if (
+            (h1 == 'X' && h2 == 'X' && h3 == "X") ||
+            (h4 == 'X' && h5 == 'X' && h6 == "X") ||
+            (h7 == 'X' && h8 == 'X' && h9 == "X") ||
+            (h3 == 'X' && h5 == 'X' && h7 == "X") ||
+            (h1 == 'X' && h5 == 'X' && h9 == "X") ||
+            (h1 == 'X' && h4 == 'X' && h7 == "X") ||
+            (h2 == 'X' && h5 == 'X' && h8 == "X") ||
+            (h3 == 'X' && h6 == 'X' && h9 == "X")
+        ) {
+            document.getElementById('winner').innerText = "X won"
+            harCountX = harCountX + 1;
+            document.getElementById('countX').innerHTML = harCountX;
+        }
+
+        else if (
+            (h1 == 'O' && h2 == 'O' && h3 == "O") ||
+            (h4 == 'O' && h5 == 'O' && h6 == "O") ||
+            (h7 == 'O' && h8 == 'O' && h9 == "O") ||
+            (h3 == 'O' && h5 == 'O' && h7 == "O") ||
+            (h1 == 'O' && h5 == 'O' && h9 == "O") ||
+            (h1 == 'O' && h4 == 'O' && h7 == "O") ||
+            (h2 == 'O' && h5 == 'O' && h8 == "O") ||
+            (h3 == 'O' && h6 == 'O' && h9 == "O")
+        ) {
+            document.getElementById('winner').innerText = "O won"
+            harCountO = harCountO + 1;
+            document.getElementById('countO').innerHTML = harCountO;
+        }
+
+        else if (
+            (h1 == 'X' || h1 == 'O') && (h2 == 'X' || h2 == 'O') && (h3 == 'X' || h3 == 'O') && (h4 == 'X' || h4 == 'O') && (h5 == 'X' || h5 == 'O') && (h6 == 'X' || h6 == 'O') && (h7 == 'X' || h7 == 'O') && (h8 == 'X' || h8 == 'O') && (h9 == 'X' || h9 == 'O')
+        ) {
+            document.getElementById('winner').innerText = "draw"
+        }
+
+    }
+
+    function harReset() {
+        document.getElementById('har1').innerText = '';
+        document.getElementById('har2').innerText = '';
+        document.getElementById('har3').innerText = '';
+        document.getElementById('har4').innerText = '';
+        document.getElementById('har5').innerText = '';
+        document.getElementById('har6').innerText = '';
+        document.getElementById('har7').innerText = '';
+        document.getElementById('har8').innerText = '';
+        document.getElementById('har9').innerText = '';
+
+        document.getElementById('winner').innerText = ""
+    }
+
+</script>
+
+</html>

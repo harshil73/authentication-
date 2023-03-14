@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change color exercise</title>
+</head>
+<style>
+    td {
+        text-align: center;
+        height: 30px;
+        width: 30px;
+    }
+    body{
+        background-color: rgb(41, 55, 56);
+    }
+</style>
+
+<body>
+    <center>
+        <table id="table1" border="1" style="height: 350px; width: 350px;"></table>
+    </center>
+
+    <script>
+        let harshilz = document.getElementById('table1');
+        
+        let harshils = ""
+        let harshiln = 3
+        let harshilm = 3
+
+
+        var harshilr = Math.floor(Math.random() * 255)
+        var harshilg = Math.floor(Math.random() * 255)
+        var harshilb = Math.floor(Math.random() * 255)
+
+        var randomc = Math.floor(Math.random() * harshilm)
+        var randomr = Math.floor(Math.random() * harshiln)
+
+
+
+
+        for (i = 0; i < harshiln; i++) {
+            harshils = harshils + "<tr>";
+            for (j = 0; j < harshilm; j++) {
+                if (i == randomr && j == randomc) {
+                    harshils = harshils + "<td style=background-color:rgba(" + harshilr + ',' + harshilg + ',' + harshilb + ',' + 0.4 + "); onclick=increase1()></td>";
+                }
+                else {
+                    harshils = harshils + "<td style=background-color:rgb(" + harshilr + ',' + harshilg + ',' + harshilb + ")></td>";
+                }
+            }
+
+            harshils += "</tr>";
+        }
+        harshilz.innerHTML = harshils
+
+        function increase1() {
+            let harshilr = Math.floor(Math.random() * 255)
+            let harshilg = Math.floor(Math.random() * 255)
+            let harshilb = Math.floor(Math.random() * 255)
+
+            let randomc = Math.floor(Math.random() * harshilm)
+            let randomr = Math.floor(Math.random() * harshiln)
+
+
+            let harshils = ""
+            if (harshiln < 9 && harshilm < 9) {
+                harshiln = harshiln + 1
+                harshilm = harshilm + 1
+            }
+            for (i = 0; i < harshiln; i++) {
+                harshils = harshils + "<tr>";
+                for (j = 0; j < harshilm; j++) {
+                    if (i == randomr && j == randomc) {
+                        harshils = harshils + "<td style=background-color:rgba(" + harshilr + ',' + harshilg + ',' + harshilb + ',' + 0.4 + "); onclick=increase1()></td>";
+                    }
+                    else {
+                        harshils = harshils + "<td style=background-color:rgb(" + harshilr + ',' + harshilg + ',' + harshilb + ")></td>";
+                    }
+                }
+
+                harshils += "</tr>";
+            }
+            harshilz.innerHTML = harshils
+        }
+
+
+
+        // function increase1() {
+        //     // document.getElementById('p1').innerHTML='dvdf';
+        //     let s = ""
+        //     if(n<9 && m<9){
+        //       n = n+1
+        //       m = m+1
+        //     }
+        //     for (i = 0; i < n; i++) {
+        //         s = s + "<tr>";
+        //         for (j = 0; j < m; j++) {
+        //             s = s + "<td style=background-color:"+arr[i]+"; onclick=increase1()>1</td>";
+        //         }
+
+        //         s += "</tr>";
+        //     }
+        // z.innerHTML = s
+        // }
+    </script>
+</body>
+
+</html>

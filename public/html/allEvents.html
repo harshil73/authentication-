@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Events in one</title>
+</head>
+<body>
+    <h1>millie bobby brown</h1>
+    <p onclick="changefont()"> rebecca Furguson</p>
+    <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste eius, similique distinctio officia quaerat corrupti alias, quis expedita incidunt veniam nam atque culpa aliquam fuga facilis impedit quia obcaecati. Beatae, eum doloremque! Eligendi aut repellendus quos beatae, cumque ut suscipit temporibus, impedit amet, rem nisi voluptate doloribus! Molestias aut enim repellenduss.</h2>
+
+    <div onclick="changeColor()" id="cl" style="color: chocolate;">
+        <h1>katherine langford</h1>
+    </div>
+
+    <div ondblclick="changeFont()" id="f" style="color: chocolate;">
+        <p>langford</p>
+    </div>
+
+
+    <div onmouseenter="changefontfamily()" id="div1" style="color: rgb(23, 22, 66);">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis hic beatae consequatur, accusamus eos ipsum minus fuga harum consequuntur expedita saepe officiis praesentium ratione quisquam voluptate a modi nam nemo sunt dignissimos? Suscipit aliquam vero at provident quas quaerat, laborum numquam amet eveniet, iste sed, consequatur perspiciatis. Aliquam ipsam corrupti labore libero dicta sapiente. Minus odit totam debitis obcaecati sunt? Mollitia dignissimos ipsa vero nobis.
+    </div>
+
+<br>
+<br>
+  name: <input type="text" onkeypress="changeBorder()" id="div2">
+    <br> <br>
+   email :<input type="text" onfocus="changeColors()" id="div3" >
+</body>
+<script>
+   
+   function changeFont(){
+        document.getElementById('f').style.fontSize="50px"
+    }
+    function changeColor(){
+        document.getElementById('cl').style.backgroundColor="blue"
+    }
+
+    function changefontfamily(){
+        document.getElementById('div1').style.fontFamily="sans-serif"
+    }
+
+    function changeBorder(){
+        document.getElementById('div2').style.border="5px red dotted"
+    }
+    function changeColors(){
+        document.getElementById('div3').style.color="green",style.fontSize="30px"
+    }
+    
+</script>
+</html>
